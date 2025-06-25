@@ -18,7 +18,7 @@
 '''
 
 # option 1
-t, r = input(), input()
+t, r = input().strip().lower(), input().strip().lower()
 game = ['камень', 'ножницы', 'бумага']
 if t == r:
     print("ничья")
@@ -35,7 +35,7 @@ else:
 # option 2
 game = ['камень', 'ножницы', 'бумага']
 answer = ['ничья', 'Руслан', 'Тимур']
-t, r = input(), input()
+t, r = input().strip().lower(), input().strip().lower()
 dif = game.index(t) - game.index(r)
 result = answer[dif]
 print(result)
