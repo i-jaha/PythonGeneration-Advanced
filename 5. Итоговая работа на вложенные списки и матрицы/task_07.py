@@ -14,6 +14,7 @@
 Программа должна вывести на экран изображение доски, разделяя элементы пробелами.
 '''
 
+# review 1
 pos = input()
 col = ord(pos[0]) - ord('a')
 row = 8 - int(pos[1])
@@ -31,6 +32,28 @@ for i in range(8):
         board[row + i][col - i] = '*'
     if 0 <= row - i < 8 and 0 <= col + i < 8:
         board[row - i][col + i] = '*'
+
+board[row][col] = 'Q'
+
+for line in board:
+    print(*line)
+
+
+
+
+# review 2
+col, row = input()
+col = ord(col) - ord('a')
+row = 8 - int(row)
+
+board = [["."] * 8 for _ in range(8)]
+
+for i in range(8):
+    for j in range(8):
+        if i == row or j == col:
+            board[i][j] = "*"
+        elif abs(i - row) == abs(j - col):
+            board[i][j] = "*"
 
 board[row][col] = 'Q'
 
