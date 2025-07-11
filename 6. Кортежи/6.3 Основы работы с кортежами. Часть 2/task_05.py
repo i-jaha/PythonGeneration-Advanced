@@ -10,4 +10,5 @@ print()
 
 # review
 data = 'Python для продвинутых!'
-print(tuple(data.split()))
+d = tuple(data)
+print(d)
