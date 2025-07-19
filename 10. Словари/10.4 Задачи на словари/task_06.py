@@ -42,6 +42,7 @@
 Записи не повторяются.
 '''
 
+# review 1
 phone_book = {}
 for _ in range(int(input())):
     number, name = input().split()
@@ -56,3 +57,12 @@ for _ in range(int(input())):
         print(" ".join(phone_book[query]))
     else:
         print("абонент не найден")
+
+# review 2
+phone_book = {}
+for _ in range(int(input())):
+    number, name = input().split()
+    name = name.lower()
+    phone_book.setdefault(name, []).append(number)
+for _ in range(int(input())):
+    print(*phone_book.get(input().lower(), ["абонент не найден"]))
