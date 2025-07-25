@@ -24,5 +24,5 @@
 """
 
 
-def greet(a, *args):
-    return "Hello, " + " and ".join((a, ) + args) + "!"
+def greet(name, *args):
+    return "Hello, " + " and ".join((name, ) + args) + "!"
