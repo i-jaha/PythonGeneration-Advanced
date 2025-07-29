@@ -33,4 +33,8 @@
 Вызывать анонимную функцию не нужно.
 '''
 
+# review 1
 is_non_negative_num = lambda x: x.isdigit() or (x.count('.') == 1 and x.replace('.', '').isdigit() and float(x) >= 0)
+
+# review 2
+is_non_negative_num = lambda x: x.replace('.', '', 1).isdigit()
